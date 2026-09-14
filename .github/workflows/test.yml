@@ -15,7 +15,7 @@ jobs:
           dd if=/dev/zero of=test-file.bin bs=1M count=105
 
       - name: Save cache
-        uses: actions/cache@v6
+        uses: actions/cache/save@v6
         with:
           path: |
             test-file.bin
