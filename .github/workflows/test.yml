@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: create 100 MB file
         run: |
-          dd if=/dev/zero of=test-file.bin bs=1M count=100
+          dd if=/dev/zero of=test-file.bin bs=1M count=105
 
       - name: Save cache
         uses: actions/cache@v6
