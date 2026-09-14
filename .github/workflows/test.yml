@@ -21,7 +21,7 @@ jobs:
             test-file.bin
           key: cached-file
 
-      - name: Save cache 2
+      - name: Save cache 3
         uses: actions/cache/save@v6
         with:
           path: |
