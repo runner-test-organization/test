@@ -26,4 +26,4 @@ jobs:
         with:
           path: |
             test-file.bin
-          key: cached-file-2
+          key: cached-file-3
