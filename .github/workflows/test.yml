@@ -1,0 +1,22 @@
+name: Test cache
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubicloud
+    steps:
+      - name: create 100 MB file
+        run: |
+          dd if=/dev/zero of=test-file.bin bs=1M count=100
+
+      - name: Save cache
+        uses: actions/cache@v6
+        with:
+          path: |
+            test-file.bin
+          key: cached-file
